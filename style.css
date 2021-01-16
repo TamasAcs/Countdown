@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font-family: "Hachi Maru Pop", cursive;
+  align-items: center;
+  background-image: url(./nye.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+}
+
+.header{
+    margin-top: 100px;
+}
+.header:hover{
+    cursor: pointer;
+}
+
+.countdown_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 80%;
+}
+span {
+  font-size: 1.5rem;
+}
+
+.el {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.5;
+}
+
+.big {
+  font-size: 5rem;
+}
+
+.rb {
+  font-size: 2.5rem;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  display: inline-block;
+}
+
+.rb:hover {
+  animation-name: rubberBand;
+  cursor: pointer;
+}
+
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+
+@media (max-width: 800px){
+    .countdown_container{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px){
+    .countdown_container{
+        width: 100%;
+    }
+    .big {
+        font-size: 3rem;
+    }
+}
+
+
+@media (max-width: 400px){
+    .countdown_container{
+        width: 100%;
+    }
+    .big {
+        font-size: 2rem;
+    }
+    .rb{
+        font-size: 1.4rem;
+    }
+}
