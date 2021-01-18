@@ -16,9 +16,6 @@ body {
 .header{
     margin-top: 100px;
 }
-.header:hover{
-    cursor: pointer;
-}
 
 .countdown_container {
   display: flex;
@@ -51,7 +48,9 @@ span {
 
 .rb:hover {
   animation-name: rubberBand;
-  cursor: pointer;
+}
+.header:hover{
+  cursor: default;
 }
 
 
