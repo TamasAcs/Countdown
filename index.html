@@ -6,10 +6,24 @@
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
     <title>Countdown</title>
 </head>
 <body>
-    
+    <div class="sky">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+
+
     <div class="header">
         <h1><span class="rb">N</span>
             <span class="rb">e</span>
@@ -55,5 +69,28 @@
         </div>
     </div>
 
+
+    <div class="navigation">
+        <div class="show" onclick="expand()">
+          <i class="fas fa-angle-double-up"></i>
+        </div>
+        <div class="hidden" id="hidden">
+            <p class="icon-bg"><i class="fas fa-stopwatch"></i></p>
+            <a href="./calc.html"><p class="icon-bg"><i class="fas fa-calculator"></i></p></a>
+            <p class="icon-bg"><i class="fas fa-film"></i></p>
+            <p class="icon-bg"><i class="fas fa-paint-brush"></i></p>
+        </div>
+    </div>
+
+    <script>
+        function expand() {
+  var x = document.getElementById("hidden");
+  if (x.style.display === "none") {
+    x.style.display = "flex";
+  } else {
+    x.style.display = "none";
+  }
+}
+        </script>
 </body>
 </html>

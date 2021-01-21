@@ -1,107 +1,69 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en"  data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="calc.css" />
-
+    <link rel="stylesheet" href="calc.css">
     <title>Calculator</title>
-  </head>
-  <body>
+</head>
+<body>
     <div class="main">
-      <div class="heading">
-        <span><i class="fas fa-bars"></i></span>
-        <span>Calculator</span>
-        <span>
-          <label>
-            <input type="checkbox" name="theme" id="checkbox" />
-            <span class="btn"></span>
-            <i class="fas fa-moon"></i>
-          </label>
-        </span>
-      </div>
-    
-    <div class="result">
-      <div class="history">
-        <p class="upper-value"></p>
-      </div>
-      <div class="output">
-        <p class="lower-value"></p>
-      </div>
-    </div>
-    <div id="keyboard">
-      <div class="group">
-        <div class="top-section">
-          <button class="operator" id="clear">C</button>
-          <button class="operator" id="backspace">
-            <i class="fas fa-backspace"></i>
-          </button>
-          <button class="operator" id="%">%</button>
+        <form name="calform">
+              <div class="heading">
+                <span><i class="fas fa-bars"></i></span>
+                <span>Calculator</span>
+                <span>
+                  <label>
+                    <input type="checkbox" name="theme" id="checkbox" />
+                    <span class="btn"></span>
+                    <i class="fas fa-moon"></i>
+                  </label>
+                </span>
+              </div>
+                  <div class="result">
+                    <input type="text" name="display">
+                  </div>
+                            <div id="keyboard">
+                <div class="group">
+                  <div class="top-section">
+                    <input type="button" value="AC" name="btn-ac" onclick="ac()" id="operator">
+                    <input type="button" value="&#xf55a"  class="fas fa-backspace" name="btn-del" onclick="del()" id="operator">
+                    <input type="button" value="/" name="btn-/" onclick="calc('/')" id="operator">
+                  </div>
+                    <div class="middle-section">
+                    <input type="button" value="7" name="btn-7" onclick="calc('7')">
+                    <input type="button" value="8" name="btn-8" onclick="calc('8')">
+                    <input type="button" value="9" name="btn-9" onclick="calc('9')">
+
+                    <input type="button" value="4" name="btn-4" onclick="calc('4')">
+                    <input type="button" value="5" name="btn-5" onclick="calc('5')">
+                    <input type="button" value="6" name="btn-6" onclick="calc('6')">
+
+                    <input type="button" value="1" name="btn-1" onclick="calc('1')">
+                    <input type="button" value="2" name="btn-2" onclick="calc('2')">
+                    <input type="button" value="3" name="btn-3" onclick="calc('3')">
+
+                    <input type="button" value="0" name="btn-0" onclick="calc('0')">
+                    <input type="button" value="00" name="btn-00" onclick="calc('00')">
+                    <input type="button" value="." name="btn-pt" onclick="calc('.')">
+                    </div>
+                </div>
+                    <div class="side-section">
+                    <input type="button" value="*" name="btn-*" onclick="calc('*')" id="operator">            
+                    <input type="button" value="+/-" class="op_key" op="negate" id="operator">            
+                    <input type="button" value="-" name="btn--" onclick="calc('-')" id="operator">
+                    <input type="button" value="+" name="btn-+" onclick="calc('+')" id="operator">
+                    <input type="button" value="=" name="btn-equal" onclick="equal()" id="operator" class="equal">
+              </div>
         </div>
-        <div class="middle-section">
-          <div>
-            <button class="number" id="7">7</button>
-            <button class="number" id="8">8</button>
-            <button class="number" id="9">9</button>
-          </div>
-          <div>
-            <button class="number" id="4">4</button>
-            <button class="number" id="5">5</button>
-            <button class="number" id="6">6</button>
-          </div>
-          <div>
-            <button class="number" id="1">1</button>
-            <button class="number" id="2">2</button>
-            <button class="number" id="3">3</button>
-          </div>
-          <div>
-            <button class="number" id="00">00</button>
-            <button class="number" id="0">0</button>
-          </div>
-        </div>
-        
-      </div>
-      <div class="side-section">
-        <button class="operator" id="/">/</button>
-        <button class="operator" id="*">x</button>
-        <button class="operator" id="-">-</button>
-        <button class="operator" id="+">+</button>
-        <button class="operator equal" id="=">=</button>
-      </div>
+            </form>
     </div>
-</div>
-    <!-- 
-<main>
-      <input type="number" value="0" />
-      <div class="keys">
-        <button class="op_key" op="clear">C</button>
-        <button class="op_key" op="negate">+/-</button>
-        <button class="op_key" op="percent">%</button>
-        <button class="op_key" op="divide">/</button>
-        <button class="num_key">7</button>
-        <button class="num_key">8</button>
-        <button class="num_key">9</button>
-        <button class="op_key" op="multiply">*</button>
-        <button class="num_key">4</button>
-        <button class="num_key">5</button>
-        <button class="num_key">6</button>
-        <button class="op_key" op="subtract">-</button>
-        <button class="num_key">1</button>
-        <button class="num_key">2</button>
-        <button class="num_key">3</button>
-        <button class="op_key" op="add">+</button>
-        <span></span>
-        <button class="num_key">0</button>
-        <button class="num_key">.</button>
-        <button class="eq_key">=</button>
-      </div> 
-    <main>
-    -->
+
 
     <script src="calc.js"></script>
-  </body>
+</body>
 </html>
