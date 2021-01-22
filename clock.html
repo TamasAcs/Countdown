@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"  data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="clock.css">
+    <title>Clock</title>
+</head>
+<body>
+    <span>
+        <label>
+          <input type="checkbox" name="theme" id="checkbox" />
+          <span class="btn"></span>
+          <i class="fas fa-adjust"></i>
+        </label>
+      </span>
+
+
+    <div class="clock">
+        <div class="hour">
+            <div class="hr" id="hr"></div>
+        </div>
+        <div class="min">
+            <div class="mn" id="mn"></div>
+        </div>
+        <div class="sec">
+            <div class="sc" id="sc"></div>
+        </div>
+    </div>
+
+
+
+    <script src="clock.js"></script>
+</body>
+</html>

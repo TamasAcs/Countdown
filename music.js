@@ -1,33 +1,27 @@
 
-
-let audio, playbtn, title, poster, artists, mutebtn, seekslider, volumeslider, seeking = false, seekto, curtimetext, durtimetext, playlist_status, dir, playlist, ext, agent, playlist_artist, repeat, randomSong;
-
-dir = "music/";
-playlist = ["Imagine Dragons - Warriors","Mulan - Short Hair","Pharrell Williams - Freedom","Tones And I - Dance Monkey"];
-title = ["Imagine Dragons - Warriors","Mulan - Short Hair","Pharrell Williams - Freedom","Tones And I - Dance Monkey"];
-
-artists = ["Imagine Dragons","Mulan","Pharrel Williams","Tones and I"];
-
-poster = ["images/warrior.jpg","images/mulan.jpg","images/freedom.png","images/dancem.jpg"];
-
-ext = ".mp3";
-agent = navigator.userAgent.toLowerCase();
+let playbtn = document.getElementById("playpausebtn");
+let nextbtn = document.getElementById("nextbtn");
+let prevbtn = document.getElementById("prevbtn");
+let mutebtn = document.getElementById("mutebtn");
+let seekslider = document.getElementById("seekslider");
+let volumeslider = document.getElementById("volumeslider");
+let curtimetext = document.getElementById("curtimetext");
+let durtimetext = document.getElementById("durtimetext");
+let playlist_status = document.getElementById("playlist_status");
+let playlist_artist = document.getElementById("playlist_artist");
+let repeat = document.getElementById("repeat");
+let randomSong = document.getElementById("random");
+let seeking = false;
+let  dir = "music/";
+let  playlist = ["Imagine Dragons - Warriors","Mulan - Short Hair","Pharrell Williams - Freedom","Tones And I - Dance Monkey"];
+let  title = ["Imagine Dragons - Warriors","Mulan - Short Hair","Pharrell Williams - Freedom","Tones And I - Dance Monkey"];
+let  artists = ["Imagine Dragons","Mulan","Pharrel Williams","Tones and I"];
+let  poster = ["images/warrior.jpg","images/mulan.jpg","images/freedom.png","images/dancem.jpg"];
+let  ext = ".mp3";
+let  agent = navigator.userAgent.toLowerCase();
 if (agent.indexOf('firefox') != -1 || agent.indexOf('opera') != -1) {
     ext = ".ogg";
 }
-
-playbtn = document.getElementById("playpausebtn");
-nextbtn = document.getElementById("nextbtn");
-prevbtn = document.getElementById("prevbtn");
-mutebtn = document.getElementById("mutebtn");
-seekslider = document.getElementById("seekslider");
-volumeslider = document.getElementById("volumeslider");
-curtimetext = document.getElementById("curtimetext");
-durtimetext = document.getElementById("durtimetext");
-playlist_status = document.getElementById("playlist_status");
-playlist_artist = document.getElementById("playlist_artist");
-repeat = document.getElementById("repeat");
-randomSong = document.getElementById("random");
 
 playlist_index = 0;
 
@@ -58,13 +52,12 @@ function fetchMusicDetails() {
     $("#playpausebtn img").attr("src", "images/pause.svg");
     $("#bgImage").attr("src", poster[playlist_index]);
     $("#image").attr("src", poster[playlist_index]);
-
+        
     playlist_status.innerHTML = title[playlist_index];
     playlist_artist.innerHTML = artists[playlist_index];
 
     audio.src = dir + playlist[playlist_index] + ext;
     audio.play();
-
 }
 
 

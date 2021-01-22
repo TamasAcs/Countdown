@@ -7,6 +7,8 @@ checkbox.addEventListener("change", function () {
   }
 });
 
+// const calform = document.querySelector(".calform");
+
 function calc(a) {
   calform.display.value += a;
 }
@@ -23,4 +25,8 @@ function del() {
 
 function ac() {
     calform.display.value = "";
+}
+
+function negate() {
+  calform.display.value = -parseFloat(calform.display.value);
 }

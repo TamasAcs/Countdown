@@ -156,7 +156,6 @@ span {
 }
 
 .hidden {
-  display: none;
   width: 450px;
   height: 110px;
   justify-content: space-evenly;
