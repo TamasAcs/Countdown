@@ -131,7 +131,7 @@ position: absolute;
 
 
 
-.fas {
+.switch {
     cursor: pointer;
     color: var(--color-switch);
     position: absolute;
@@ -142,8 +142,98 @@ position: absolute;
   label input[type="checkbox"] {
     -webkit-appearance: none;
   }
-/*   
-  label input[type="checkbox"]:checked ~ .fas {
-    color:  #091921;
+
+
+
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
   }
-   */
+  .show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 70px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    font-size: 32px;
+    position: absolute;
+    bottom: 0;
+  }
+  .list {
+    display: flex;
+  }
+  
+  .show:hover,
+  .show:active {
+    color: rgb(92, 92, 92);
+  }
+  
+  .hidden {
+    width: 550px;
+    height: 110px;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    bottom: 70px;
+    overflow: hidden;
+  }
+  .hidden p{
+    margin: 0;
+  }
+  .hidden .fas {
+    font-size: 2rem;
+  }
+  .icon-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+    overflow: hidden;
+  }
+  
+#pokeimg img{
+  width: 35px;
+ 
+}
+  .icon-bg:hover {
+    transform: translateY(-5px);
+    transition: 0.2s ease-in-out;
+  }
+  .icon-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    transform: skewX(45deg) translateX(150px);
+    transition: 0.8s;
+  }
+  .icon-bg:hover::before {
+    transform: skewX(45deg) translateX(-150px);
+  }
+  
+  .hidden a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+  }
