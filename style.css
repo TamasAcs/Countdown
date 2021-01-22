@@ -165,7 +165,9 @@ span {
   bottom: 70px;
   overflow: hidden;
 }
-
+.hidden p{
+  margin: 0;
+}
 .hidden .fas {
   font-size: 2rem;
 }

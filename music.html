@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+  />
+  <link rel="stylesheet" href="music.css">
+    <title>Music App</title>
+</head>
+<body>
+    <div class="music-container">
+        <div class="music-content">
+            <div id="bg-image">
+                <div id="blackLayer">
+
+                </div>
+                <img src="./images/bg.jpg" alt="" id="bgImage">
+            </div>
+            <div id="menu">
+                <img src="./images/menu.svg" alt="" >
+                <img src="./images/search.svg" alt="" >
+            </div>
+            <div id="volume-container">
+                <img src="./images/volume-down.svg" alt="" id="volume-down">
+                <input type="range" class="slider" id="volumeslider" min="0" max="100" value="100" step="1">
+                <img src="./images/volume-up.svg" alt="" id="volume-up">
+
+            </div>
+            <div id="music-image">
+                <div id="circle-image">
+                    <img src="./images/bg.jpg" alt="" id="image">
+                </div>
+                <div id="music-title">
+                    <h5 id="playlist_status"></h5>
+                    <h6 id="playlist_artist"></h6>
+                </div>
+            </div>
+            <div id="music-menu">
+                <button id="random"><img src="./images/random.svg" alt=""></button>
+                <button id="mutebtn"><img src="./images/volume-mute.svg" alt=""></button>
+            </div>
+            <div id="currentTime">
+                <span id="curtimetext">00:00</span>
+                <span id="durtimetext">00:00</span>
+            </div>
+            <input type="range" class="sleekslider" id="seekslider" min="0" max="100" value="0" step="1">
+            <div id="buttons">
+                <button class="repeat" id="repeat"><img src="./images/repeat.svg" alt=""></button>
+                <div>
+                    <button class="prev" id="prevbtn"><img src="./images/prev.svg" alt=""></button>
+                    <button class="play" id="playpausebtn"><img src="./images/play.svg" alt=""></button>
+                    <button class="next" id="nextbtn"><img src="./images/next.svg" alt=""></button>
+                </div>
+                <span class="like">
+                    <i class="far fa-heart" aria-hidden="true"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="music.js"></script>
+</body>
+</html>
