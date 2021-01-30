@@ -7,8 +7,6 @@
 }
 
 body {
-	background: #EFEFBB;
-	background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
 	background: #333333;
 	display: flex;
 	flex-direction: column;
@@ -40,7 +38,8 @@ h1 {
 	margin: 10px;
 	padding: 20px;
     text-align: center;
-    position: relative;
+	position: relative;
+	overflow: hidden;
 }
 
 .pokemon .img-container {
@@ -80,4 +79,42 @@ h1 {
 .type span{
     color: #d6c887;
     font-size: 1.2rem;
+}
+
+
+.stats{
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	/* padding: 1rem; */
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transform: translateY(101%);
+	transition: 0.3s ease-in;
+	overflow: auto;
+	/* max-height: 100%; */
+	height: 85%;
+	background-color: #333333;
+	color: #d6c887;
+
+}
+.stats p{
+	justify-content: space-between;
+	
+}
+.pokemon:hover .stats{
+	transform: translateY(0);
+}
+
+
+.flex{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	
+}
+.flex > ul{
+	list-style:none;
+	padding: 0;
 }

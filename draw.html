@@ -3,19 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+  />
     <link rel="stylesheet" href="draw.css">
     <title>Drawing App</title>
 </head>
 <body>
-    <canvas id="canvas" width="800" height="600"></canvas>
-<div class="toolbox">
-    <button id="increase">+</button>
-    <span id="size">30</span>
-    <button id="decrease">-</button>
-    <input type="color" id="color">
-    <button id="clear">C</button>
-</div>
+    
+    <div class="container">
+            <h1>Drawing App</h1>
+    <canvas id="canvas" width="700" height="400"></canvas>
+        <div class="toolbox" id="toolbox">
+            <button id="increase">+</button>
+            <span id="size">30</span>
+            <button id="decrease">-</button>
+            <input type="color" id="color">
+            <button id="clear">C</button>
+        </div>
+    </div>
+   
 
+    <div class="navigation">
+        <div class="show" onclick="expand()">
+          <i class="fas fa-angle-double-up"></i>
+        </div>
+        <div class="hidden" id="hidden" style="display:none">
+            <a href="./counter.html"><p class="icon-bg" data-tilt data-tilt-max="30"><i class="fas fa-stopwatch"></i></p></a>
+            <a href="./calc.html"><p class="icon-bg" data-tilt data-tilt-max="30"><i class="fas fa-calculator"></i></p></a>
+            <a href="./.html"><p class="icon-bg" data-tilt data-tilt-max="30"><i class="fas fa-film"></i></p></a>
+            <a href="./music.html"><p class="icon-bg" data-tilt data-tilt-max="30"><i class="fas fa-headphones-alt"></i></p></a>
+            <a href="./draw.html"><p class="icon-bg" data-tilt data-tilt-max="30"><i class="fas fa-paint-brush"></i></p></a>
+            <a href="./clock.html"><p class="icon-bg" data-tilt data-tilt-max="30"><i class="fas fa-clock"></i></p></a>
+            <a href="./pokedex.html"><p class="icon-bg" data-tilt data-tilt-max="30" id="pokeimg"><img src="./images/pokeball.png" alt=""></p></a>
+        </div>
+    </div>
+
+
+    
+    <script>
+        function expand() {
+  var x = document.getElementById("hidden");
+  if (x.style.display === "none") {
+    x.style.display = "flex";
+
+  } else {
+    x.style.display = "none";
+  }
+}
+        </script>
     <script src="draw.js"></script>
 </body>
 </html>
