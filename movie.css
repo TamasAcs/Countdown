@@ -9,11 +9,17 @@ body {
     font-family: "Poppins", sans-serif;
     margin: 0;
 }
-header{
+.header{
     background-color: #373b69;
     padding: 1rem;
+    height: 80px;
+    width: 100%;
+    color: #f4f4f4;
+    position: fixed;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
 }
 .search{
 padding: 0.5rem 1rem;
@@ -24,19 +30,24 @@ font-family: inherit;
 font-size: 1rem;
 outline: none;
 color: white;
+letter-spacing: 1px;
 }
 .search::placeholder{
     color: #7378c5;
+    letter-spacing: 1px;
 }
 .search:focus{
     background-color: #22254b;
 }
+.search:hover{
+    background-color: #22254b;
+}
 main{
+    padding-top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .movie{
     background-color: #373b69;
     border-radius: 3px;
@@ -82,7 +93,8 @@ color: rgb(197, 48, 48);
 }
 
 .overview{
-    background-color: white;
+    background-color: #303461;
+    color: #e4e4e4;
     padding: 2rem;
     position: absolute;
     max-height: 100%;
@@ -91,7 +103,7 @@ color: rgb(197, 48, 48);
     bottom: 0;
     right: 0;
     transform: translateY(101%);
-    transition: 0.5s ease-in;
+    transition: 0.4s ease-in;
 }
 
 .movie:hover .overview{

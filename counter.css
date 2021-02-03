@@ -123,6 +123,7 @@ span {
   justify-content: center;
   position: absolute;
   bottom: 10px;
+  cursor: pointer;
 }
 .show {
   display: flex;

@@ -13,6 +13,9 @@ body {
   margin: 0;
   font-family: "Caveat", cursive;
 }
+a{
+  margin-top: 2rem;
+}
 h2 {
   letter-spacing: 3px;
 }
@@ -103,18 +106,24 @@ h2 {
   text-transform: uppercase;
 }
 .search {
+  width: 250px;
+  height: 40px;
   outline: none;
-  margin: 1rem;
+  margin: 1.5rem;
   background: transparent;
   border: none;
   border-bottom: 2px solid #d6c887;
+  border-top: 2px solid #d6c887;
+  border-radius: 50px;
   line-height: 1.2rem;
   font-size: 1.4rem;
+  text-align: center;
   color: #d6c887;
   letter-spacing: 2px;
   font-family: "Caveat", cursive;
 }
 .search::placeholder {
+  text-align: center;
   color: #d6c887;
   letter-spacing: 2px;
   font-family: "Caveat", cursive;

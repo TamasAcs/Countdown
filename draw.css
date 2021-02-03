@@ -80,6 +80,7 @@ margin-left: auto;
   justify-content: center;
   position: absolute;
   bottom: 20px;
+  cursor: pointer;
 }
 .show {
   display: flex;

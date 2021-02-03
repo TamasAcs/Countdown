@@ -25,7 +25,7 @@ let pokemons = [];
 const main_types = Object.keys(colors);
 
 const fetchPokemons = async () => {
-  for (let i = 1; i <= 30; i++) {
+  for (let i = 1; i <= pokemons_number; i++) {
     await getAllPokemon(i);
   }
   pokemons.forEach((pokemon) => createPokemonCard(pokemon));

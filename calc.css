@@ -1,7 +1,6 @@
 :root {
   --black: rgba(#000, 0.4);
 }
-
 html {
   --bg: #f5f6f7;
   --color-text: #9c9c9c;
@@ -14,7 +13,6 @@ html {
   --color-equal-inset-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.5),
     inset 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
-
 html[data-theme="dark"] {
   --bg: #131419;
   --color-text: #ffffff;
@@ -28,13 +26,11 @@ html[data-theme="dark"] {
   --color-equal-inset-shadow: inset -2px -2px 6px rgba(255, 106, 0, 0.2),
     inset 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background: var(--bg);
   font-family: "Poppins", sans-serif;
@@ -44,12 +40,11 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .main {
   width: 300px;
   height: 560px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
@@ -65,7 +60,6 @@ body {
   position: relative;
   padding: 0 28px;
 }
-
 .heading span {
   color: var(--color-text);
   font-size: 18px;
@@ -75,7 +69,6 @@ body {
   cursor: pointer;
   font-size: 15px;
 }
-
 .heading span:nth-child(2) {
   margin-top: 5px;
 }
@@ -89,7 +82,6 @@ body {
   left: 30%;
   border-radius: 10px;
 }
-
 .result {
   height: 160px;
   position: relative;
@@ -97,7 +89,6 @@ body {
   border-top: 3px solid rgba(0, 0, 0, 0.05);
   border-bottom: 3px solid rgba(0, 0, 0, 0.05);
 }
-
 .result input {
   height: 100%;
   width: 100%;
@@ -111,11 +102,9 @@ body {
   font-size: 32px;
   color: var(--color-text);
 }
-
 #keyboard {
   padding: 30px 20px;
 }
-
 #keyboard input[type="button"] {
   outline: none;
 }
@@ -130,7 +119,6 @@ body {
   background: var(--bg);
   box-shadow: var(--color-shadow);
 }
-
 .top-section input[type="button"] {
   margin-top: 2px;
 }
@@ -144,7 +132,6 @@ body {
   margin-top: 2px;
   margin-left: 10.4px;
 }
-
 .middle-section input[type="button"] {
   margin: 5px 5px;
   color: var(--color-text);
@@ -163,16 +150,13 @@ body {
   background: var(--bg);
   box-shadow: var(--color-shadow);
 }
-
 .side-section input[type="button"] {
   margin-left: 2px;
 }
-
 .group {
   width: 185px;
   float: left;
 }
-
 input[type="button"] {
   width: 45px;
   height: 45px;
@@ -184,18 +168,16 @@ input[type="button"] {
   cursor: pointer;
   box-shadow: var(--color-shadow);
 }
-
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-    margin: 0; 
+  -webkit-appearance: none;
+  margin: 0;
 }
 .equal {
-  background-color: var(--color-orange)!important;
+  background-color: var(--color-orange) !important;
   color: #fff !important;
-  box-shadow: var(--color-equal-shadow)!important;
+  box-shadow: var(--color-equal-shadow) !important;
 }
-
 #operator {
   color: var(--color-orange);
 }
@@ -203,11 +185,10 @@ input[type="button"]:active,
 input[type="button"]:hover {
   box-shadow: var(--color-inset-shadow);
 }
-
 input[name="btn-equal"]:active,
 input[name="btn-equal"]:hover {
-  background: var(--color-orange)!important;
-  box-shadow: var(--color-equal-inset-shadow)!important;
+  background: var(--color-orange) !important;
+  box-shadow: var(--color-equal-inset-shadow) !important;
 }
 .fas {
   cursor: pointer;
@@ -215,13 +196,9 @@ input[name="btn-equal"]:hover {
 label input[type="checkbox"] {
   -webkit-appearance: none;
 }
-
 label input[type="checkbox"]:checked ~ .fas {
   color: var(--color-orange);
 }
-
-
-
 
 .navigation {
   display: flex;
@@ -229,6 +206,7 @@ label input[type="checkbox"]:checked ~ .fas {
   justify-content: center;
   position: absolute;
   bottom: 10px;
+  cursor: pointer;
 }
 .show {
   display: flex;
@@ -266,7 +244,7 @@ label input[type="checkbox"]:checked ~ .fas {
   bottom: 70px;
   overflow: hidden;
 }
-.hidden p{
+.hidden p {
   margin: 0;
 }
 .hidden .fas {
@@ -281,14 +259,13 @@ label input[type="checkbox"]:checked ~ .fas {
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  
+
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(2px);
   overflow: hidden;
 }
-
-#pokeimg img{
+#pokeimg img {
   width: 35px;
 }
 .icon-bg:hover {
@@ -310,7 +287,10 @@ label input[type="checkbox"]:checked ~ .fas {
   transform: skewX(45deg) translateX(-150px);
 }
 
-.hidden a, a:visited, a:hover, a:active {
+.hidden a,
+a:visited,
+a:hover,
+a:active {
   color: inherit;
   text-decoration: none;
 }
