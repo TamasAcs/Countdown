@@ -9,11 +9,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: "Lato";
   margin: 0;
   font-family: "Caveat", cursive;
 }
-a{
+a {
   margin-top: 2rem;
 }
 h2 {
@@ -46,6 +45,7 @@ h2 {
 .pokemon .img-container img {
   margin-top: 20px;
   max-width: 90%;
+  filter: drop-shadow(0px 5px 3px black);
 }
 .pokemon .info {
   margin-top: 20px;
@@ -73,14 +73,12 @@ h2 {
   display: flex;
   flex-direction: column;
   position: absolute;
-  /* padding: 1rem; */
   bottom: 0;
   left: 0;
   right: 0;
   transform: translateY(101%);
   transition: 0.3s ease-in;
   overflow: auto;
-  /* max-height: 100%; */
   height: 85%;
   background-color: #333333;
   color: #d6c887;
